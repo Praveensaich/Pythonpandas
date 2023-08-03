@@ -7,8 +7,8 @@ streamlit.text(" Drinks ")
 streamlit.text(" Chocolates ")
 streamlit.header("Fruits")
 fruits = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-select_fruit = fruits.set_index('Fruit')
-streamlit.multiselect("Pick a Fruit: ", list(select_fruit.index))
+fruits = fruits.set_index('Fruit')
+streamlit.multiselect("Pick a Fruit: ", list(fruits.index))
 streamlit.dataframe(fruits)
 
 
